@@ -1,5 +1,5 @@
 import { describe, it, expect } from "bun:test";
-import { notionPageListLoader, notionPageLoader } from "./index.ts";
+import { notionDatabasePagesLoader, notionPageLoader } from "./index.ts";
 import { NotionPageSchema } from "./schema/page.ts";
 import { NotionBlockSchema } from "./schema/block.ts";
 
@@ -25,9 +25,9 @@ describe("notionPageLoader", async () => {
 	});
 });
 
-describe("notionPageListLoader", () => {
+describe("notionDatabasePagesLoader", () => {
 	it("should parse page list with content correctly", async () => {
-		const result = await notionPageListLoader({
+		const result = await notionDatabasePagesLoader({
 			databaseId: "190bfd39e7bc8080964bfe12ff6e56ce",
 		});
 

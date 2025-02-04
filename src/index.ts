@@ -51,4 +51,4 @@ notionPageLoader.schema = z.object({
 	contents: NotionBlockSchema.array(),
 });
 
-export { notionPageLoader, notionDatabasePagesLoader as notionPageListLoader };
+export { notionPageLoader, notionDatabasePagesLoader };
