@@ -1,0 +1,26 @@
+{
+  "name": "notion-loader",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "astro": "^5.2.3",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build:base": "bun build --outdir dist ./src/index.ts --format=esm",
+    "build:types": "tsc",
+    "build": "bun run build:base && bun run build:types"
+  },
+  "type": "module",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15"
+  }
+}
