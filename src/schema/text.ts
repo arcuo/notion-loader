@@ -1,37 +1,5 @@
 import { z } from "astro/zod";
-
-export const NotionUserSchema = z.object({
-	object: z.literal("user"),
-	id: z.string(),
-});
-
-export const NotionColorSchemaBase = z.enum([
-	"default",
-	"gray",
-	"brown",
-	"orange",
-	"yellow",
-	"green",
-	"blue",
-	"purple",
-	"pink",
-	"red",
-]);
-
-export const NotionColorSchema = NotionColorSchemaBase.and(
-	z.enum([
-		"default_background",
-		"gray_background",
-		"brown_background",
-		"orange_background",
-		"yellow_background",
-		"green_background",
-		"blue_background",
-		"purple_background",
-		"pink_background",
-		"red_background",
-	]),
-);
+import { NotionColorSchema } from "./color";
 
 export const NotionEmojiSchema = z.object({
 	type: z.literal("emoji"),

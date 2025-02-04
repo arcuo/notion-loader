@@ -1,11 +1,15 @@
 # notion-loader
 
+Astro content loader for Notion.
+
+
 To install dependencies:
 
 ```bash
 bun install
 ```
 
+##
 To run:
 
 ```bash
