@@ -46,9 +46,12 @@ async function notionDatabasePagesLoader(opts: {
 	}));
 }
 
-notionPageLoader.schema = z.object({
+const schema = z.object({
 	page: NotionPageSchema,
 	contents: NotionBlockSchema.array(),
 });
+
+notionPageLoader.schema = schema
+notionDatabasePagesLoader.schema = z.array(schema);
 
 export { notionPageLoader, notionDatabasePagesLoader };
